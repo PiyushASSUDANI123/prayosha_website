@@ -1,0 +1,337 @@
+/* ============================================
+   ProjectsList.css — 1:1 big.dk replica layout
+   ============================================ */
+
+.projects-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  font-family: 'Helvetica Neue', Helvetica, Inter, sans-serif;
+}
+
+/* --- Sub Navigation Bar --- */
+.sub-nav-bar {
+  position: sticky;
+  top: 50px; /* Sticks precisely underneath the 50px top-nav */
+  z-index: 90;
+}
+
+.sub-nav {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  padding: 0 0 10px 0; /* 0 top padding to hug the main nav */
+  height: 30px; /* Very thin height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 90;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.sub-nav-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: capitalize; /* "Culture", "Education" */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.02em;
+}
+
+.sub-nav-btn:hover {
+  color: #555555;
+}
+
+.sub-nav-btn.active {
+  font-weight: 500;
+  /* No underline */
+}
+
+/* --- Projects Feed --- */
+.projects-feed {
+  width: 100%;
+  padding: 0 0 5rem 0;
+}
+
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  border: none !important;
+  outline: none !important;
+}
+
+.feed-subsection {
+  display: flex;
+  flex-direction: column;
+  border: none !important;
+  outline: none !important;
+}
+
+/* --- Individual Project Row (big.dk 1:1 replica) --- */
+.project-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 1rem 10px 1rem; /* Exact vertical gap between projects */
+  cursor: pointer;
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+}
+
+.project-info {
+  flex: 0 0 25%; /* Adjusted proportion for smaller left column */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 20px; /* Exact gap between right-edge of text and left-edge of image */
+  margin-top: 0;
+}
+
+.project-row.expanded .project-info {
+  height: 65vh; /* Match main image height */
+  justify-content: space-between;
+}
+
+.project-icon {
+  background: #000000;
+  color: #FFFFFF;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.project-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Title */
+.project-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; /* Increased to match reference */
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  margin: 0 0 10px 0;
+  max-width: 100%;
+}
+
+/* Location */
+.project-location {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px; /* Increased to match reference */
+  font-weight: 400;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* --- Right: Project Image --- */
+.project-image-wrap {
+  flex: 0 0 70%; /* Adjusted proportion for smaller right column */
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Inline Expanded Gallery Styles --- */
+
+.project-row.expanded {
+  padding: 40px 4rem 40px 4rem; /* Exact padding to frame previous/next projects */
+  max-width: 100%; /* Break out of 620px container */
+  justify-content: flex-start;
+  gap: 60px; /* Exact gap between text and image */
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.project-row.expanded::-webkit-scrollbar {
+  display: none;
+}
+
+.project-row.expanded .project-info {
+  flex: 0 0 300px; /* Wider left column for larger text */
+}
+
+.horizontal-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.gallery-main-image {
+  height: 65vh;
+  width: auto;
+  max-width: 80vw;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.gallery-block {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.gallery-image {
+  height: 65vh;
+  width: auto;
+  max-width: 80vw;
+  object-fit: cover;
+}
+
+.gallery-text-block {
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: normal;
+  padding-top: 0;
+}
+
+.gallery-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px; /* Increased to match reference */
+  line-height: 1.4;
+  color: #000;
+  margin: 0;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+}
+
+.year-item {
+  margin-bottom: 8px;
+}
+
+.meta-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #a0a0a0;
+  letter-spacing: 0.1em;
+}
+
+.meta-value {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; /* Increased to match reference */
+  color: #111;
+  text-transform: uppercase;
+}
+
+.share-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.share-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  color: #999;
+  letter-spacing: 0.1em;
+}
+
+.share-icons {
+  display: flex;
+  gap: 12px;
+}
+.share-icons .icon {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.credits-block {
+  gap: 20px;
+}
+.credits-block .meta-item {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+
+
+/* Hover effects */
+.project-row:hover .project-image {
+  transform: scale(1.02);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .projects-feed {
+    padding: 1rem 1rem 4rem 1rem;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+  }
+
+  .project-info {
+    flex: unset;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .project-image-wrap {
+    flex: unset;
+    width: 100%;
+  }
+
+  .sub-nav {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+}
