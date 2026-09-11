@@ -3,17 +3,14 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: #fff; /* Pure white */
+  background-color: #fff; 
   color: #333;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* Global utility classes for the architectural look */
 .arch-text-sm {
   font-family: 'Outfit', sans-serif;
   font-size: 0.85rem;
@@ -23,7 +20,6 @@ body {
   font-weight: 400;
   margin-bottom: 0.2rem;
 }
-
 .arch-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2rem;
@@ -33,7 +29,6 @@ body {
   margin: 0.5rem 0 1rem 0;
   color: #111;
 }
-
 .arch-desc {
   font-family: 'Outfit', sans-serif;
   font-size: 0.85rem;
@@ -43,22 +38,18 @@ body {
   color: #888;
   font-weight: 300;
 }
-
-/* Decorative elements */
 .arch-line {
   position: absolute;
-  background-color: #A3A692; /* Olive-ish grey for lines */
+  background-color: #A3A692; 
   opacity: 0.5;
 }
-
 .arch-dot {
   position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #697352; /* Darker olive for dots */
+  background-color: #697352; 
 }
-
 .arch-circle {
   position: absolute;
   border: 1px solid rgba(163, 166, 146, 0.4);

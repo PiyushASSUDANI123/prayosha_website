@@ -280,7 +280,6 @@ const rawProjects = [
     icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   }
 ];
-
 export const DUMMY_CREDITS = {
   creativeDirector: "Bjarke Ingels",
   partnerInCharge: "Leon Rost",
@@ -294,25 +293,19 @@ export const DUMMY_CREDITS = {
     "MRY", "Rosendin Electric", "WSP USA"
   ]
 };
-
 export const DUMMY_EXTRA_TEXTS = {
   0: "The building's form emerges as a linear volume that is manipulated in configuration responding to the surrounding campus context. The staggered volumes frame shaded outdoor spaces.",
   2: "Materiality plays a central role in the design, with exposed concrete and natural wood fostering a sense of grounded elegance. Expansive glass panels blur the boundary between inside and out.",
   5: "This gorgeous architecture amplifies and elevates a revolutionary vision for higher learning at a critical moment. We can no longer rely on siloed disciplines to meet the challenges and opportunities of our time.",
   8: "The beautiful finishes and spectacular public art inspire our humanism. This is a carved jewel for the city. A gem for the ages."
 };
-
 export const DUMMY_PROJECTS = rawProjects.map(project => {
   const images = [project.thumbnail];
-  // Add 10 dummy gallery images per project
   for (let i = 1; i <= 10; i++) {
-    const width = (i % 3 === 0) ? 800 : 1200; // mix of portrait and landscape
+    const width = (i % 3 === 0) ? 800 : 1200; 
     const height = (i % 3 === 0) ? 1200 : 800;
     images.push(`https://picsum.photos/seed/${project.id * 100 + i}/${width}/${height}`);
   }
-  
-  // Assign texts at random intervals (like after 1 image, then 3 images, etc)
   const texts = { ...DUMMY_EXTRA_TEXTS };
-
   return { ...project, images, texts };
 });

@@ -1,16 +1,45 @@
-# React + Vite
+# Prayosha Architecture - Website Source Code
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to the source code for the Prayosha Architecture Portfolio Website. This project is built using modern web technologies to ensure a fast, responsive, and aesthetically pleasing experience.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend Framework:** React.js
+- **Build Tool:** Vite
+- **Styling:** Custom CSS (Modular & Responsive)
 
-## React Compiler
+## 📂 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/` - Contains all the React components, styles, and assets.
+  - `assets/` - Images, fonts, and other static files.
+- `public/` - Publicly accessible static files.
+- `index.html` - The main entry point of the website.
+- `package.json` - Lists all project dependencies and scripts.
 
-## Expanding the Oxlint configuration
+## ⚙️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+To run this project locally, follow these steps:
+
+1. **Install Node.js:** Ensure you have Node.js installed on your system.
+2. **Install Dependencies:** Open your terminal in the project directory and run:
+   ```bash
+   npm install
+   ```
+3. **Start the Development Server:** Run the following command to start the site locally:
+   ```bash
+   npm run dev
+   ```
+4. **View in Browser:** Open the local URL provided in your terminal (usually `http://localhost:5173`).
+
+## 🛠 Building for Production
+
+When you are ready to deploy the website to a live server, generate the production build by running:
+```bash
+npm run build
+```
+This will create a `dist/` folder containing the optimized and minified static files ready for deployment.
+
+## 🤝 Handover Notes
+
+- All development comments have been stripped from the source code for a clean handover.
+- The project is fully responsive and optimized for performance.

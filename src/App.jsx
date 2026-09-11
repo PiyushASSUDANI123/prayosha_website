@@ -5,21 +5,16 @@ import Home from './Home'
 import ProjectsList from './ProjectsList'
 import About from './About'
 import './App.css'
-
 function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [activeCategory, setActiveCategory] = useState('Architecture');
-
   const handleProjectClick = (projectId) => {
-    // Project detail is now handled inline within ProjectsList
   };
-
   const handleHomeCategoryClick = (category) => {
     setActiveCategory(category);
     setCurrentView('projectsList');
   };
-
   return (
     <div className="app-container">
       <Header 
@@ -45,7 +40,6 @@ function App() {
               />
             </motion.div>
           )}
-
           {currentView === 'about' && (
             <motion.div key="about" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <About onNavigate={setCurrentView} />
@@ -53,7 +47,6 @@ function App() {
           )}
         </AnimatePresence>
       </main>
-      
       <footer className="global-footer">
         <p>
           Designed and developed by <strong>Piyush Assudani</strong> &bull; 9413879444 &bull; <a href="https://piyushassudani.in" target="_blank" rel="noopener noreferrer">piyushassudani.in</a>
@@ -62,5 +55,4 @@ function App() {
     </div>
   );
 }
-
 export default App

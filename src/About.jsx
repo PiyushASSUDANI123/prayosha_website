@@ -1,23 +1,17 @@
 import React from 'react';
 import './About.css';
 import { DUMMY_PROJECTS } from './projectsData';
-
 export default function About({ onNavigate }) {
-  // Get 3 projects for the bottom grid
   const gridProjects = DUMMY_PROJECTS.slice(0, 3);
-  
-  // Custom titles for the grid based on screenshot
   const gridTitles = [
     "FUTURE OF RESILIENT CITIES",
     "FUTURE OF MULTIMEDIA MEMORIALS",
     "FUTURE OF WORK"
   ];
-
   return (
     <div className="about-page">
       <div className="about-content">
         <h1 className="about-title">ABOUT</h1>
-        
         <div className="about-text-columns">
           <div className="about-column">
             <p>
@@ -38,7 +32,6 @@ export default function About({ onNavigate }) {
           </div>
         </div>
       </div>
-
       <div className="about-grid-section">
         <div className="about-projects-grid">
           {gridProjects.map((project, index) => (
@@ -55,7 +48,6 @@ export default function About({ onNavigate }) {
           ))}
         </div>
       </div>
-
       <footer className="about-footer">
         <div className="footer-links">
           <button className="footer-btn">EMAIL <span className="plus">+</span></button>

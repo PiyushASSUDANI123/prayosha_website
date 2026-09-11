@@ -7,7 +7,6 @@
   overflow: hidden;
   padding: 1vw;
 }
-
 .top-nav {
   position: sticky;
   top: 0;
@@ -17,19 +16,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 3rem 0 3rem; /* 0 bottom padding */
-  height: 50px; /* Fixed small height */
+  padding: 10px 3rem 0 3rem; 
+  height: 50px; 
   margin-bottom: 0;
   z-index: 100;
 }
-
 .nav-left {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-
-/* Brand Toggle (Morphs between Logo and Hamburger) */
 .brand-toggle {
   position: relative;
   cursor: pointer;
@@ -40,7 +36,6 @@
   justify-content: flex-end;
   z-index: 60;
 }
-
 .brand-text {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -51,7 +46,6 @@
   right: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .brand-dots {
   position: absolute;
   right: 0;
@@ -63,49 +57,41 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 }
-
 .brand-dots .dot {
   width: 8px;
   height: 8px;
   background-color: #111;
   border-radius: 50%;
 }
-
-/* States for Morphing (Hover and Menu Open) */
 .brand-toggle:hover .brand-text,
 .brand-toggle.menu-mode .brand-text {
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
 }
-
 .brand-toggle:hover .brand-dots,
 .brand-toggle.menu-mode .brand-dots {
   opacity: 1;
   transform: translateY(0);
 }
-
 .nav-search {
   display: flex;
   align-items: center;
-  color: #333; /* Darker for premium feel */
+  color: #333; 
   cursor: pointer;
 }
-
-/* Header Main Navigation (Centered) */
 .header-main-nav {
   position: static;
   transform: none;
   display: flex;
-  gap: 40px; /* Reduced gap from 80px */
+  gap: 40px; 
   align-items: center;
 }
-
 .header-nav-btn {
   background: none;
   border: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px; /* Bumped from 11px to match ref */
+  font-size: 12px; 
   font-weight: 400;
   color: #888888;
   text-transform: uppercase;
@@ -113,19 +99,15 @@
   cursor: pointer;
   padding: 0;
   transition: color 0.3s ease;
-  position: relative; /* For the active square */
+  position: relative; 
 }
-
 .header-nav-btn:hover,
 .header-nav-btn.active {
   color: #000000;
 }
-
 .header-nav-btn.active {
   font-weight: 500;
 }
-
-/* Active state black square */
 .header-nav-btn.active::before {
   content: "";
   position: absolute;
@@ -136,8 +118,6 @@
   height: 5px;
   background-color: #000000;
 }
-
-/* Inline Menu Styling */
 .inline-menu {
   position: absolute;
   top: 100%;
@@ -154,13 +134,11 @@
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
   z-index: 40;
 }
-
 .inline-menu.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 .inline-menu a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -171,12 +149,10 @@
   text-transform: uppercase;
   text-align: right;
 }
-
 .inline-menu a:hover {
   color: #111;
   padding-right: 15px;
 }
-
 .collage-container {
   position: relative;
   width: 100%;
@@ -185,29 +161,23 @@
   background-color: transparent;
   margin: auto;
 }
-
-/* Common Image Wrapper */
 .image-wrapper {
   position: absolute;
   display: flex;
   flex-direction: column;
 }
-
 .image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Soft fade for all images to completely hide hard edges */
   -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
-
 .image-wrapper:hover img {
   transform: scale(1.05);
 }
-
 .text-content {
   position: absolute;
   display: flex;
@@ -216,8 +186,6 @@
   cursor: pointer;
   max-width: 260px;
 }
-
-/* 01 Architecture */
 .section-architecture {
   top: 10%;
   left: 26%;
@@ -228,8 +196,6 @@
   top: 15%;
   left: 8%;
 }
-
-/* 02 Interior */
 .section-interior {
   top: 28%;
   left: 62%;
@@ -240,8 +206,6 @@
   top: 3%;
   left: 62%;
 }
-
-/* 03 Landscape */
 .section-landscape {
   top: 62%;
   left: 22%;
@@ -250,14 +214,11 @@
 }
 .section-landscape img {
   clip-path: inset(0 0 0 0 round 50% 50% 0 0);
-  /* Uses the global radial mask for edges, plus the arch clip-path */
 }
 .text-landscape {
   top: 72%;
   left: 4%;
 }
-
-/* 04 Products */
 .section-products {
   top: 58%;
   left: 68%;
@@ -268,8 +229,6 @@
   top: 68%;
   left: 48%;
 }
-
-/* Connecting Lines */
 .line-1 {
   width: 1px;
   height: 80%;
@@ -300,8 +259,6 @@
   left: 46%;
   top: 45%;
 }
-
-/* Arcs and Circles */
 .arc-1 {
   width: 30%;
   height: 30%;
@@ -311,7 +268,6 @@
   border-right: 1px solid rgba(163, 166, 146, 0.5);
   border-top-right-radius: 100%;
 }
-
 .arc-2 {
   width: 20%;
   height: 20%;
@@ -321,13 +277,10 @@
   border-left: 1px solid rgba(163, 166, 146, 0.5);
   border-bottom-left-radius: 100%;
 }
-
-/* Dots */
 .dot-1 { left: 9.7%; top: 24.5%; }
 .dot-2 { left: 79.7%; top: 24.5%; }
 .dot-3 { left: 84.7%; top: 74.5%; }
 .dot-4 { left: 45.7%; top: 44.5%; }
-
 @media (max-width: 768px) {
   .top-nav {
     flex-direction: column;
@@ -361,8 +314,6 @@
     padding: 0 1rem;
   }
 }
-
-/* Search Dropdown Styles */
 .search-dropdown {
   position: absolute;
   top: 150%;
@@ -377,12 +328,10 @@
   z-index: 100;
   animation: dropdownFadeIn 0.2s ease-out forwards;
 }
-
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .search-dropdown-input {
   width: 100%;
   border: none;
@@ -393,11 +342,9 @@
   font-family: inherit;
   color: #111;
 }
-
 .search-dropdown-input::placeholder {
   color: #bbb;
 }
-
 .search-dropdown-results {
   margin-top: 1rem;
   max-height: 350px;
@@ -406,16 +353,13 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
 .search-dropdown-results::-webkit-scrollbar {
   width: 4px;
 }
-
 .search-dropdown-results::-webkit-scrollbar-thumb {
   background-color: #ddd;
   border-radius: 4px;
 }
-
 .search-dropdown-item {
   display: flex;
   align-items: center;
@@ -425,39 +369,32 @@
   transition: background 0.2s ease;
   border-radius: 4px;
 }
-
 .search-dropdown-item:hover {
   background: #f7f7f7;
 }
-
 .search-dropdown-img {
   width: 48px;
   height: 48px;
   object-fit: cover;
   border-radius: 3px;
 }
-
 .search-dropdown-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .search-dropdown-title {
   font-size: 0.9rem;
   font-weight: 500;
   color: #111;
   margin-bottom: 0.15rem;
 }
-
 .search-dropdown-cat {
   font-size: 0.7rem;
   color: #888;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
-/* Secondary Pages Shared Styles */
 .page-container {
   width: 100%;
   min-height: calc(100vh - 120px);
@@ -466,69 +403,55 @@
   display: flex;
   flex-direction: column;
 }
-
-/* About Page */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
   align-items: center;
 }
-
 .about-text {
   max-width: 500px;
 }
-
 .about-image img {
   width: 100%;
   height: 60vh;
   object-fit: cover;
   border-radius: 4px;
 }
-
-/* People Page */
 .people-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 4rem;
 }
-
 .person-card {
   display: flex;
   flex-direction: column;
 }
-
 .person-img-wrapper {
   width: 100%;
   aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: 4px;
 }
-
 .person-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
-
 .person-card:hover .person-img-wrapper img {
   transform: scale(1.05);
 }
-
-/* Careers Page */
 .careers-content {
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
 }
-
 .jobs-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
 .job-row {
   display: flex;
   justify-content: space-between;
@@ -536,7 +459,6 @@
   padding: 2rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
 .job-apply-btn {
   padding: 0.8rem 2rem;
   background-color: transparent;
@@ -549,25 +471,20 @@
   transition: all 0.3s;
   border-radius: 2px;
 }
-
 .job-apply-btn:hover {
   background-color: #111;
   color: #fff;
 }
-
-/* Contact Page */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 6rem;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
 .contact-input {
   width: 100%;
   padding: 1rem 0;
@@ -580,15 +497,12 @@
   outline: none;
   transition: border-color 0.3s;
 }
-
 .contact-input:focus {
   border-bottom-color: #111;
 }
-
 .contact-input::placeholder {
   color: #999;
 }
-
 .submit-btn {
   align-self: flex-start;
   padding: 1rem 3rem;
@@ -600,11 +514,9 @@
   border-radius: 2px;
   margin-top: 1rem;
 }
-
 .submit-btn:hover {
   background-color: #333;
 }
-
 @media (max-width: 768px) {
   .about-grid, .contact-grid {
     grid-template-columns: 1fr;
@@ -616,8 +528,6 @@
     gap: 1.5rem;
   }
 }
-
-/* Global Footer */
 .global-footer {
   width: 100%;
   text-align: center;
@@ -630,23 +540,19 @@
   margin-top: auto;
   text-transform: uppercase;
 }
-
 .global-footer p {
   margin: 0;
 }
-
 .global-footer strong {
   color: #333;
   font-weight: 600;
 }
-
 .global-footer a {
   color: #111;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
-
 .global-footer a:hover {
   color: #666;
 }
